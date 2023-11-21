@@ -50,7 +50,7 @@ const Invoice = () => {
     <div className=' px-12'>
       <div className=' my-4 flex justify-between items-center'>
 
-        <NavLink to={`/account/order/${id}`}><div className=' px-6 py-2 rounded bg-primary text-white'>Back</div></NavLink>
+        <NavLink to={`https://flipkart-clone-application-mern.vercel.app//account/order/${id}`}><div className=' px-6 py-2 rounded bg-primary text-white'>Back</div></NavLink>
         <ReactToPrint
         trigger={() => <button className=' px-6 py-2 rounded bg-primary text-white'>download</button>}
         content={() => componentRef.current}
