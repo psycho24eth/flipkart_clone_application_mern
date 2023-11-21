@@ -18,12 +18,12 @@ const Account = () => {
 
   useEffect(()=>{
     if(user){
-     if(user.role === 'admin') navigate('/admin/dashboard')
+     if(user.role === 'admin') navigate('https://flipkart-clone-application-mern.vercel.app//admin/dashboard')
      setName(user.name)
      setEmail(user.email)
      setMobile(user.mobile)
     }else{
-      navigate('/login')
+      navigate('https://flipkart-clone-application-mern.vercel.app//login')
     }
   },[ user , navigate])
 
