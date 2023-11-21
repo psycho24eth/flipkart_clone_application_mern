@@ -23,7 +23,7 @@ export const LoginUser = (form) => async (dispatch) => {
       type: Login_Req,
     });
     const config = { headers: { "Content-Type": "application/json" } };
-    const { data } = await Axios.post("/login/user", form, config);
+    const { data } = await Axios.post("https://flipkart-clone-application-mern.vercel.app//login/user", form, config);
     console.log(data);
     dispatch({
       type: Login_Success,
@@ -46,7 +46,7 @@ export const RegisterUser = (form) => async (dispatch) => {
 
     const config = { headers: { "Content-Type": "application/json" } };
 
-    const { data } = await Axios.post("/create/user", form, config);
+    const { data } = await Axios.post("https://flipkart-clone-application-mern.vercel.app//create/user", form, config);
     dispatch({
       type: Register_Success,
       payload: data.user,
@@ -71,7 +71,7 @@ export const LoadUser = () => async (dispatch) => {
       type: Load_User_Request,
     });
 
-    const { data } = await Axios.get("/me/user");
+    const { data } = await Axios.get("https://flipkart-clone-application-mern.vercel.app//me/user");
 
     dispatch({
       type: Load_User_Sucess,
@@ -87,7 +87,7 @@ export const LoadUser = () => async (dispatch) => {
 
 export const logoutUser = () => async (dispatch) => {
   try {
-    await Axios.get("/logout/user");
+    await Axios.get("https://flipkart-clone-application-mern.vercel.app//logout/user");
     dispatch({ type: Logout_User_Sucess });
   } catch (error) {
     dispatch({
@@ -104,7 +104,7 @@ export const AdminGetUsers = () => async (dispatch) => {
       type: All_User_Request,
     });
 
-    let link = `/getall/user`;
+    let link = `https://flipkart-clone-application-mern.vercel.app//getall/user`;
     const { data } = await Axios.get(link);
     dispatch({
       type: All_User_Success,
