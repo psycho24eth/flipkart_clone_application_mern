@@ -37,9 +37,9 @@ export const getproduct =
       });
       let link;
       if (category) {
-        link = `/getall/products?name=${key}&page=${page}&category=${category}`;
+        link = `https://flipkart-clone-application-mern.vercel.app//getall/products?name=${key}&page=${page}&category=${category}`;
       } else {
-        link = `/getall/products?name=${key}&page=${page}&price[gte]=${min}&price[lte]=${max}&rating[gte]=${rating}`;
+        link = `https://flipkart-clone-application-mern.vercel.app//getall/products?name=${key}&page=${page}&price[gte]=${min}&price[lte]=${max}&rating[gte]=${rating}`;
       }
       const { data } = await Axios.get(link);
 
@@ -63,7 +63,7 @@ export const getproddetials = (id) => async (dispatch) => {
       type: Product_Detials_Request,
     });
 
-    const { data } = await Axios.get(`/product/${id}`);
+    const { data } = await Axios.get(`https://flipkart-clone-application-mern.vercel.app//product/${id}`);
 
     dispatch({
       type: Product_Detials_Success,
@@ -84,7 +84,7 @@ export const GetTopProducts = () => async (dispatch) => {
       type: Top_Product_Request,
     });
 
-    const { data } = await Axios.get(`/top/products`);
+    const { data } = await Axios.get(`https://flipkart-clone-application-mern.vercel.app//top/products`);
 
     dispatch({
       type: Top_Product_Success,
@@ -106,7 +106,7 @@ export const AdminGetProducts = () => async (dispatch) => {
       type: Admin_Product_Request,
     });
 
-    let link = `/admin/products`;
+    let link = `https://flipkart-clone-application-mern.vercel.app//admin/products`;
     const { data } = await Axios.get(link);
 
     dispatch({
@@ -129,7 +129,7 @@ export const CreateProducts = (formdata) => async (dispatch) => {
 
     // const config = { headers : { "Content-Type" :  "application/json" } }
 
-    const { data } = await Axios.post("/create/product", formdata);
+    const { data } = await Axios.post("https://flipkart-clone-application-mern.vercel.app//create/product", formdata);
 
     dispatch({
       type: Create_Product_Success,
@@ -148,7 +148,7 @@ export const newReview = (reviewData) => async (dispatch) => {
   try {
     dispatch({ type: New_Review_Request });
     const config = { header: { "Content-Type": "application/json" } };
-    const { data } = await Axios.put("/add/review", reviewData, config);
+    const { data } = await Axios.put("https://flipkart-clone-application-mern.vercel.app//add/review", reviewData, config);
     console.log(data);
     dispatch({
       type: New_Review_Sucess,
@@ -171,7 +171,7 @@ export const UpdateProducts = (formdata, id) => async (dispatch) => {
 
     // const config = { headers : { "Content-Type" :  "application/json" } }
 
-    const { data } = await Axios.put(`/update/product/${id}`, formdata);
+    const { data } = await Axios.put(`https://flipkart-clone-application-mern.vercel.app//update/product/${id}`, formdata);
     console.log(data);
     dispatch({
       type: Upadate_Product_Success,
@@ -192,7 +192,7 @@ export const Delete_Product = (id) => async (dispatch) => {
       type: Delete_Product_Request,
     });
 
-    const { data } = await Axios.delete(`/delete/product/${id}`);
+    const { data } = await Axios.delete(`https://flipkart-clone-application-mern.vercel.app//delete/product/${id}`);
     console.log(data);
     dispatch({
       type: Delete_Product_Sucess,
