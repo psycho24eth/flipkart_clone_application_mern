@@ -10,7 +10,7 @@ const Dashboard = ({children ,activeTab}) => {
 
    useEffect(()=>{
       if(!user){
-         navigate('/login')
+         navigate('https://flipkart-clone-application-mern.vercel.app//login')
       }
    } , [navigate , user])
    return (
