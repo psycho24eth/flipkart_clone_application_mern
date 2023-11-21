@@ -20,27 +20,27 @@ const AdminSideBar = ({ activeTab }) => {
   const navs = [
     {
       title: "Dashboard",
-      redirect: '/admin/dashboard'
+      redirect: 'https://flipkart-clone-application-mern.vercel.app//admin/dashboard'
     },
     {
       title: "Orders",
-      redirect: '/admin/orders'
+      redirect: 'https://flipkart-clone-application-mern.vercel.app//admin/orders'
     },
     {
       title: "Products",
-      redirect: '/admin/products'
+      redirect: 'https://flipkart-clone-application-mern.vercel.app//admin/products'
     },
     {
       title: "Add Product",
-      redirect: '/admin/add-product'
+      redirect: 'https://flipkart-clone-application-mern.vercel.app//admin/add-product'
     },
     {
       title: "Users",
-      redirect: '/admin/users'
+      redirect: 'https://flipkart-clone-application-mern.vercel.app//admin/users'
     },
     {
       title: "All reviews",
-      redirect: '/admin/all/revi  ews'
+      redirect: 'https://flipkart-clone-application-mern.vercel.app//admin/all/revi  ews'
     },
     
 
