@@ -47,19 +47,19 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-// const corsOptions ={
-//   // origin: ["https://flipkart-clone-ui.vercel.app" , 'http://localhost:3000'],
+const corsOptions ={
+origin: ["https://flipkart-clone-ui.vercel.app",
 //   origin: "http://localhost:3000",
-//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//   preflightContinue: false,
-//   credentials: true,
-//   optionsSuccessStatus: 204
-// }
-// app.use(cors(corsOptions));
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  credentials: true,
+  optionsSuccessStatus: 204
+}
+app.use(cors(corsOptions));
 
 app.use(
   cors({
-    // origin:'https://flipkart-clone-ui.vercel.app',
+    origin:'https://flipkart-clone-ui.vercel.app',
     origin: "http://localhost:3000",
     credentials: true,
     optionsSuccessStatus: 200,
