@@ -29,7 +29,7 @@ const Sidebar = ({ user }) => {
             <div className=' bg-white rounded-sm'>
 
                 {/* <!-- my orders box> */}
-                <NavLink to={'/account/orders'}>
+                <NavLink to={'https://flipkart-clone-application-mern.vercel.app//account/orders'}>
                     <div className=' p-4  py-5 w-full flex gap-6 items-center  border-b font-extrabold uppercase text-gray-500'>
                         <LocalMallIcon className=' text-primary' />
                         <h1 className=' text-lg'>My Orders</h1>
@@ -47,7 +47,7 @@ const Sidebar = ({ user }) => {
 
                     {/* links */}
                     <ul className=' text-black font-medium'>
-                        <NavLink to={'/account'}>
+                        <NavLink to={'https://flipkart-clone-application-mern.vercel.app//account'}>
                             <li className=' text-base hover:bg-green-50 py-3 px-16'>
                                 Profile Information
                             </li>
@@ -68,7 +68,7 @@ const Sidebar = ({ user }) => {
                     {/* links */}
                     <ul className=' text-black font-medium'>
                         <li className=' text-base hover:bg-green-50 py-3 px-16'>My Reviews & Ratings</li>
-                        <NavLink to={'/wishlist'}><li className=' text-base hover:bg-green-50 py-3 px-16'>My Wishlist</li></NavLink>
+                        <NavLink to={'https://flipkart-clone-application-mern.vercel.app//wishlist'}><li className=' text-base hover:bg-green-50 py-3 px-16'>My Wishlist</li></NavLink>
                     </ul>
                     {/* links */}
                 </div>
