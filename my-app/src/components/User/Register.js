@@ -119,7 +119,7 @@ const Register = () => {
               : "Register"}</button>
         </form>
         <div className=' mt-5'>
-          <span className=' font-medium'> Already have Account ? <NavLink to={'/login'} ><span className=' font-bold text-primary cursor-pointer'>Login</span></NavLink>
+          <span className=' font-medium'> Already have Account ? <NavLink to={'https://flipkart-clone-application-mern.vercel.app//login'} ><span className=' font-bold text-primary cursor-pointer'>Login</span></NavLink>
           </span>
         </div>
       </div>
