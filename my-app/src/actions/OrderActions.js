@@ -8,7 +8,7 @@ export const NewOrder = (form) => async(dispatch)=>{
         type : New_Order_Request,
     })
     console.log(form);
-    const {data} = await Axios.post('/create/order' , form)
+    const {data} = await Axios.post('https://flipkart-clone-application-mern.vercel.app//create/order' , form)
 
     console.log(data);
 
@@ -37,7 +37,7 @@ export const Myorders = () => async(dispatch)=>{
      dispatch({
          type : My_Order_Request,
      })
-     const {data} = await Axios.get('/get/myorders')
+     const {data} = await Axios.get('https://flipkart-clone-application-mern.vercel.app//get/myorders')
       
  
      dispatch({
@@ -64,7 +64,7 @@ export const Myorders = () => async(dispatch)=>{
      dispatch({
          type : Order_Detial_Request,
      })
-     const {data} = await Axios.get(`/order/${id}`)
+     const {data} = await Axios.get(`https://flipkart-clone-application-mern.vercel.app//order/${id}`)
       
      console.log(data);
      dispatch({
@@ -93,7 +93,7 @@ export const AdminGetOrders = ()=> async(dispatch) =>{
         dispatch({
             type :Admin_Orders_Request,
         })
-        const {data} = await Axios.get('/getall/orders')
+        const {data} = await Axios.get('https://flipkart-clone-application-mern.vercel.app//getall/orders')
          console.log(data);
     
         dispatch({
@@ -123,7 +123,7 @@ export const Delete_Order = (id) => async(dispatch) => {
         })
 
 
-        const {data} = await Axios.delete(`/delete/order/${id}`)
+        const {data} = await Axios.delete(`https://flipkart-clone-application-mern.vercel.app//delete/order/${id}`)
         console.log(data);
         dispatch({
             type : Delete_Order_Sucess,
@@ -146,7 +146,7 @@ export const updateOrder = ( { id , ...form}) => async(dispatch) =>{
             type : Update_Order_Request
         })
 
-        const {data} = await Axios.put(`/update/order/${id}` , form)
+        const {data} = await Axios.put(`https://flipkart-clone-application-mern.vercel.app//update/order/${id}` , form)
 
         dispatch({
             type : Update_Order_Sucess,
