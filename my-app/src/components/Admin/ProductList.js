@@ -59,7 +59,7 @@ const ProductList = () => {
     {
       field: 'id', headerName: 'ID', width: 80,
       renderCell: (params) => {
-        return (<NavLink to={`/admin/update-product/${params.row.id}`}>`${params.row.id}`</NavLink>)
+        return (<NavLink to={`https://flipkart-clone-application-mern.vercel.app//admin/update-product/${params.row.id}`}>`${params.row.id}`</NavLink>)
         // 
       },
     },
@@ -109,7 +109,7 @@ const ProductList = () => {
       width: 200,
       renderCell: (params) => {
         return (<div className='space-x-3'>
-                      <NavLink to={`/admin/update-product/${params.row.id}`}>
+                      <NavLink to={`https://flipkart-clone-application-mern.vercel.app//admin/update-product/${params.row.id}`}>
                         <button className=' ml-auto px-6 py-1 rounded bg-primary text-white'>
                           View
                         </button>
